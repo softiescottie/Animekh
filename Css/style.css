@@ -1,0 +1,845 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Koulen&family=Noto+Sans+Khmer:wght@100..900&family=Quicksand:wght@300..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-color: rgb(28, 27, 27);
+  --yl-color: rgb(255, 163, 3);
+  --white-color: white;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  font-family: "Quicksand", sans-serif;
+  overflow-x: hidden;
+}
+
+.hero {
+  width: 100%;
+  height: 100vh;
+  background-image: url(../public/img/Demon\ Slayer\ back\ ground.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.bg-video {
+  width: 100%;
+  height: 90vh;
+  position: absolute;
+  object-fit: cover;
+  z-index: 1;
+  top: 13%;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  width: 100%;
+  height: 14vh;
+  display: flex;
+  background-color: var(--bg-color);
+  justify-content: space-around;
+  align-items: center;
+}
+
+.header img {
+  width: 100px;
+  height: 100px;
+}
+
+.header ul {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+
+.header ul li {
+  position: relative;
+}
+
+.header ul li a {
+  padding: 10px 20px;
+  display: block;
+  text-decoration: none;
+  color: var(--white-color);
+  font-size: 24px;
+  font-weight: 600;
+  transition: color 0.3s, transform 0.25s;
+}
+
+.header ul li:hover >a {
+  color: var(--yl-color);
+  transform: scale(0.95);
+}
+
+.header ul .dropdown {
+  display: none;
+  z-index: 1;
+  width: 200px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--bg-color);
+ 
+}
+
+.header ul li:hover .dropdown {
+  display: block;
+}
+
+.header form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.header input {
+  width: 300px;
+  height: 40px;
+  border-radius: 5px;
+  background-color: transparent;
+  border: 1px solid var(--white-color);
+  color: var(--white-color);
+  padding: 10px;
+  font-size: 18px;
+}
+
+.header button {
+  width: 88px;
+  height: 40px;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: 600;
+  color: black;
+  background-color: var(--yl-color);
+  border: none;
+  cursor: pointer;
+}
+
+.hero-text {
+  position: absolute;
+  top: 30%;
+  left: 15%;
+  z-index: 1;
+}
+
+.hero-text h1 {
+  font-family: "Algerian", sans-serif;
+  width: 500px;
+  font-size: 30px;
+  font-weight: 300;
+  color: var(--white-color);
+}
+
+.hero-text span {
+  font-family: "Algerian", sans-serif;
+  font-size: 25px;
+  font-weight: 400;
+  color: var(--yl-color);
+  display: block;
+  margin-top: 10px;
+}
+
+.hero-text p {
+  font-size: 18px;
+  color: var(--white-color);
+  margin-top: 10px;
+}
+
+.hero-text button {
+  margin-top: 5px;
+  padding: 5px 20px;
+  border-radius: 8px;
+  height: 50px;
+  background-color: transparent;
+  border: 2px solid var(--yl-color);
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--yl-color);
+  cursor: pointer;
+}
+
+.hero-text button:hover {
+  background-color: var(--yl-color);
+  color: var(--white-color);
+  transition: 0.3s;
+}
+
+.hero-text button a {
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
+  color: inherit;
+}
+
+.content {
+  margin: auto;
+  width: 90%;
+  height: 60vh;
+  z-index: 2;
+  position: relative;
+}
+
+.content span {
+  color: var(--yl-color);
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.content p {
+  margin-top: 20px;
+  font-size: 35px;
+  font-weight: 800;
+  color: var(---color);
+}
+
+.card {
+  width: 100%;
+  height: 110%;
+  display: flex;
+  gap: 30px;
+  overflow-x: scroll;
+  flex-wrap: nowrap;
+  padding-top: 20px;
+}
+
+.post {
+  flex: 0 0 auto;
+  position: relative;
+  width: 280px;
+  height: 90%;
+  top: 7%;
+  ;
+}
+
+.post img {
+  position: relative;
+  width: 100%;
+  height: 90%;
+  display: block;
+  object-fit: cover;
+}
+
+.post .sub {
+  background-color: var(--yl-color);
+  position: absolute;
+  color: white;
+  font-weight: 900;
+  font-size: 20px;
+  padding: 8px 10px;
+  width: 80px;
+  inset: 0 auto auto 0;
+  clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+}
+
+.post .mv {
+  background-color: var(--yl-color);
+  position: absolute;
+  top: 2%;
+  right: 3%;
+  padding: 6px 10px;
+  color: white;
+  font-weight: 900;
+  width: 80px;
+  font-size: 18px;
+  border-radius: 5px;
+}
+
+.post .date {
+  background-color: var(--yl-color);
+  position: absolute;
+  bottom: 15%;
+  left: 3%;
+  text-align: center;
+  padding: 6px 10px;color: white;
+  font-weight: 900;
+  width: 80px;
+  font-size: 15px;
+  border-radius: 5px;
+}
+
+.post .time {
+  background-color: rgba(255, 255, 255, 0.35);
+  position: absolute;
+  bottom: 15%;
+  right: 3%;
+  text-align: center;
+  padding: 6px 10px;
+  color: var(--white-color);
+  font-weight: 900;
+  width: 100px;
+  font-size: 15px;
+  border-radius: 5px;
+}
+
+.post h1 {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  font-size: 22px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  padding: 10px 0;
+  font-weight: bold;
+}
+
+.post h1:hover {
+  color: var(--yl-color);
+}
+
+.new-mv {
+  position: relative;
+  margin: 5% auto;
+  width: 93%;
+  height: 100vh;
+
+  & span {
+    color: var(--yl-color);
+    font-size: 50px;
+    font-weight: 500;
+  }
+
+  & p {
+    margin-top: 20px;
+    font-size: 35px;
+    font-weight: 800;
+    color: var(--white-color);
+  }
+
+  & .card-new {
+    width: var(--full-size);
+    height: 90%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+
+    & .mv-new-card {
+      width: 500px;
+      height: 250px;
+      margin-top: 30px;
+      display: flex;
+      gap: 25px;
+
+      & .item {
+        position: relative;
+        width: 40%;
+        height: 100%;
+
+        & img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 5px;
+        }
+
+        & span {
+          background-color: var(--yl-color);
+          position: absolute;
+          top: 3%;
+          right: 3%;
+          color: black;
+          font-weight: 900;
+          font-size: 12px;
+          padding: 4px 5px;
+          border-radius: 3px;
+        }
+      }
+
+      & .text-title {
+        width: 40%;
+        height: 100%;
+
+        & h1 {
+          margin-top: 2%;
+          font-size: 25px;
+          color: black;
+          font-weight: 400;
+        }
+
+        & p {
+          font-size: 18px;
+          font-weight: normal;
+          color: gray;
+        }
+
+        & button {
+          margin-top: 25px;
+          background-color: transparent;
+          border: 1px solid var(--yl-color);
+          padding: 5px 20px;
+          color: var(--yl-color);
+          font-size: 20px;
+          border-radius: 5px;
+        }
+      }
+    }
+  }
+}
+@keyframes Scrolldown {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+& .mv-new-card {
+  width: 500px;
+  height: 250px;
+  margin-top: 30px;
+  display: flex;
+  gap: 25px;
+  animation: Scrolldown both;
+  animation-timeline: view();
+  animation-range: entry 20% cover 50%;
+}
+
+/* part3*/
+:root {
+  --white-color: #ffffff;
+  --yl-color: #ffcc00;
+  --bg-color: #000000;
+}
+
+.Tv-show {
+  width: 100%;
+  height: 100vh;
+}
+
+.Tv-show .tx {
+  width: 100%;
+  height: 7vh;
+  text-align: center;
+}
+
+.Tv-show .tx h1 {
+  font-size: 40px;
+  color: var(--white-color);
+  font-weight: 900;
+}
+
+.Tv-show .mv-show {
+  margin: auto;
+  width: 95%;
+  height: auto;
+  position: relative;
+}
+
+.Tv-show .mv-show span {
+  color: var(--yl-color);
+  font-size: 50px;
+  font-weight: 500;
+}
+
+.Tv-show .mv-show p {
+  margin-top: 20px;
+  font-size: 35px;
+  font-weight: 800;
+  color: #000000;
+}
+
+/* Hero TV Show 2 */
+.Tv-show .hero-tv-show2 {
+  position: relative;
+  top: 5%;
+  margin: auto;
+  width: 100%;
+  height: 90vh;
+  background-image: url(../public/img/Naruto\ Uzumaki\ backgound.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.Tv-show .hero-tv-show2 h1 {
+  font-size: 80px;
+  color: var(--white-color);
+}
+
+.Tv-show .hero-tv-show2 p {
+  font-size: 20px;
+  font-weight: 200;
+  color:black;
+}
+
+.Tv-show .hero-tv-show2 a {
+  position: absolute;
+  top: 70%;
+  font-size: 40px;
+  text-decoration: none;
+  border: 3px solid var(--yl-color);
+  padding: 10px 20px;
+  color: var(--yl-color);
+  border-radius: 8px;
+  transition: 0.45s;
+}
+
+.Tv-show .hero-tv-show2 a:hover {
+  background-color: var(--yl-color);
+  color: var(--bg-color);
+  transition: 0.45s;
+}
+
+.Tv-show .hero-tv-show2 .text {
+  position: relative;
+  top: 30%;
+  left: 10%;
+  width: 50%;
+  height: 40vh;
+}
+
+/* TV Ani Show Grid */
+.Tv-show .tv-ani-show {
+  width: 100%;
+  height: 160vh;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+/* Each Post */
+.Tv-show .tv-ani-show .post {
+  flex: 0 0 auto;
+  position: relative;
+  width: 280px;
+  height: 410px;
+  top: 7%;
+  animation: Scrolldown both;
+  /* Note: You might want to adjust or remove animation properties if undefined */
+}
+
+.Tv-show .tv-ani-show .post img {
+  position: relative;
+  width: 100%;
+  height: 80%;
+  display: block;
+  object-fit: cover;
+}
+
+/* Sub Label */
+.Tv-show .tv-ani-show .post .sub {
+  background-color: var(--yl-color);
+  position: absolute;
+  color: black;
+  font-weight: 900;
+  font-size: 20px;
+  padding: 8px 10px;
+  width: 80px;
+  inset: 0 auto auto 0;
+  transform-origin: bottom right;
+  clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+}
+
+/* Date Label */
+.Tv-show .tv-ani-show .post .date {
+  background-color: var(--yl-color);
+  position: absolute;
+  bottom: 22%;
+  left: 3%;
+  text-align: center;
+  padding: 6px 10px;
+  color: black;
+  font-weight: 900;
+  width: 80px;
+  font-size: 15px;
+  border-radius: 5px;
+}
+
+/* Time Label */
+.Tv-show .tv-ani-show .post .time {
+  background-color: rgba(255, 255, 255, 0.346);
+  position: absolute;
+  bottom: 22%;
+  right: 3%;
+  text-align: center;
+  padding: 6px 10px;
+  color: var(--white-color);
+  font-weight: 900;
+  width: 100px;
+  font-size: 15px;
+  border-radius: 5px;
+}
+
+/* Post Title */
+.Tv-show .tv-ani-show .post h1 {
+  position: absolute;
+  bottom: 2%;
+  left: 1%;
+  color: var(--white-color);
+  font-size: 33px;
+  transition: color 0.3s;
+}
+
+.Tv-show .tv-ani-show .post h1:hover {
+  color: var(--yl-color);
+  transition: color 0.3s;
+}
+.view {
+  position: absolute;
+  bottom: 20px;  /* Distance from the bottom */
+  right: 20px;   /* Distance from the right */
+  background-color:rgb(255, 213, 0);
+  color: white;
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.view:hover {
+  background-color: #555;
+}
+
+/* part4 */
+/* Demon Slayer Section */
+.Tv-show .mv-show.demon-slayer {
+  margin-top: 100px;
+  position: relative;
+}
+
+/* Hero Image Section */
+.Tv-show .hero-tv-show-demon {
+  width: 100%;
+  height: 90vh;
+  background-image: url(../public/img/Demon\ Slayer\ back\ ground.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+}
+
+.Tv-show .hero-tv-show-demon .text {
+  position: absolute;
+  top: 30%;
+  left: 10%;
+  width: 50%;
+  height: auto;
+}
+
+.Tv-show .hero-tv-show-demon h1 {
+  font-size: 80px;
+  color: var(--white-color);
+}
+
+.Tv-show .hero-tv-show-demon p {
+  font-size: 20px;
+  color: black;
+  font-weight: 300;
+}
+
+.Tv-show .hero-tv-show-demon a {
+  position: absolute;
+  top: 70%;
+  font-size: 40px;
+  text-decoration: none;
+  border: 3px solid var(--yl-color);
+  padding: 10px 20px;
+  color: var(--yl-color);
+  border-radius: 8px;
+  transition: 0.45s;
+}
+
+.Tv-show .hero-tv-show-demon a:hover {
+  background-color: var(--yl-color);
+  color: var(--bg-color);
+}
+
+/* Demon Slayer Grid */
+.Tv-show .tv-ani-show-demon {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* ✅ 4 columns */
+  gap: 30px;
+  padding: 60px 40px;
+  justify-items: center;
+}
+
+/* Post Cards */
+.Tv-show .tv-ani-show-demon .post {
+  width: 280px;
+  height: 410px;
+  position: relative;
+}
+
+.Tv-show .tv-ani-show-demon .post img {
+  width: 100%;
+  height: 80%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Labels */
+.Tv-show .tv-ani-show-demon .sub {
+  background-color: var(--yl-color);
+  color: black;
+  font-weight: 900;
+  font-size: 20px;
+  padding: 8px 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+}
+
+.Tv-show .tv-ani-show-demon .date {
+  background-color: var(--yl-color);
+  position: absolute;
+  bottom: 22%;
+  left: 3%;
+  color: black;
+  font-weight: 900;
+  padding: 6px 10px;
+  font-size: 15px;
+  border-radius: 5px;
+}
+
+.Tv-show .tv-ani-show-demon .time {
+  background-color: rgba(255, 255, 255, 0.346);
+  position: absolute;
+  bottom: 22%;
+  right: 3%;
+  color: white;
+  font-weight: 900;
+  padding: 6px 10px;
+  font-size: 15px;
+  border-radius: 5px;
+}
+
+/* Title */
+.Tv-show .tv-ani-show-demon .post h1 {
+  position: absolute;
+  bottom: 2%;
+  left: 1%;
+  color: white;
+  font-size: 33px;
+}
+
+.Tv-show .tv-ani-show-demon .post h1:hover {
+  color: var(--yl-color);
+}
+
+
+
+/* info */
+.footer {
+  width: 100%;
+  height: 50vh;
+  background-color: rgba(84, 82, 82, 0.344);
+
+  .foot-con {
+    width: 100%;
+    height: 75%;
+    display: flex;
+    justify-content: space-around;
+
+    .abt {
+      padding: 15px 0;
+
+      h1 {
+        padding: 15px 0px;
+        font-size: 35px;
+        color: var(--white-color);
+        transition: 0.3s;
+
+        &:hover {
+          color: var(--yl-color);
+        }
+      }
+
+      p {
+        padding: 8px 0px;
+        font-size: 20px;
+        color: gray;
+        transition: 0.3s;
+
+        &:hover {
+          color: var(--white-color);
+        }
+      }
+    }
+
+    .connect {
+      width: 450px;
+      height: auto;
+      padding: 10px 0px;
+
+      h1 {
+        padding: 15px 0px;
+        font-size: 45px;
+        color: var(--white-color);
+      }
+
+      .icon {
+        color: var(--white-color);
+        padding: 15px 0px;
+        font-size: 30px;
+        display: flex;
+        gap: 20px;
+        transition: 0.3s;
+
+        #icon1:hover,
+        #icon2:hover,
+        #icon3:hover,
+        #icon4:hover,
+        #icon5:hover {
+          color: var(--yl-color);
+          transition: 0.3s;
+        }
+      }
+
+      p {
+        padding: 15px 0;
+        font-size: 20px;
+        color: gray;
+      }
+
+      a {
+        position: absolute;
+        text-decoration: none;
+        font-size: 20px;
+        background-color: red;
+        color: var(--white-color);
+        padding: 13px 25px;
+        border-radius: 8px;
+        transition: 0.3s;
+
+        &:hover {
+          background-color: rgb(131, 6, 6);
+        }
+      }
+    }
+  }
+
+  .by {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    img {
+      width: 90px;
+      height: 90px;
+      object-fit: cover;
+    }
+
+    p {
+      color: grey;
+      font-size: 20px;
+    }
+  }
+}
